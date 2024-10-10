@@ -9,3 +9,15 @@
   background: black;
   color: white;
 }
+/* CSS für die Anordnung von Hex-Code und Copy-Button */
+.hex-code-container {
+  display: flex; /* Flexbox verwenden, um die Elemente nebeneinander anzuzeigen */
+  align-items: center; /* Vertikale Zentrierung */
+}
+.copy-container {
+  display: inline-block; /* Inline-Block für den Button */
+}
+.contrast-score {
+  color: black; /* Textfarbe schwarz */
+  font-weight: bold; /* Text dick gedruckt */
+}

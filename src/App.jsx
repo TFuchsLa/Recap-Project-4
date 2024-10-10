@@ -1,12 +1,14 @@
 import { nanoid } from "nanoid"; // Import nanoid for unique IDs
-import { useState } from "react"; // Import useState for state management
 import { initialColors } from "./lib/colors"; // Import the initial colors
 import Color from "./Components/Color/Color"; // Import the Color component
 import ColorForm from "./Components/ColorForm/ColorForm"; // Import the ColorForm component
 import "./App.css"; // Import the CSS file for the App
+import useLocalStorageState from "use-local-storage-state";
 
 function App() {
-  const [colors, setColors] = useState(initialColors); // Zustand für die Farben
+  const [colors, setColors] = useLocalStorageState("colors", {
+    defaultValue: initialColors, // Set initial colors
+  });
 
   function handleAddColor(newColor) {
     const id = nanoid(); // Generiere eine neue ID
